@@ -17,6 +17,9 @@ categories: centos7 virtualbox
 
 2. 将cdrom挂载到文件系统
 
+    >很多情况下，会自动挂载到/opt/目录下，如果在/opt/目录下有类似```VboxGuestAdditions-6.0.8```的文件夹，则可以跳过这一步
+
+
     cdrom 位于```/dev/cdrom```
     ```
     sudo mount -r /dev/cdrom {挂载路径}
