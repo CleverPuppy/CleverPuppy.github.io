@@ -31,6 +31,7 @@ categories: centos7 virtualbox
     sudo yum install yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers 
 
     sudo yum install yum install kernel-devel
+    ```
 
 4. 切换到{挂载路径}， 然后运行安装程序
 
