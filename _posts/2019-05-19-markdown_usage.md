@@ -5,9 +5,11 @@ date:   2019-05-19 11:41:42 -0500
 categories: markdown
 ---
 
-> 使用标记语言可以 __快速创建格式化文档__，如markdown.\
+> 使用标记语言可以 __快速创建格式化文档__，如markdown\
 > 文件名后缀为`.markdown`或是`.md`\
 > 下面给出了一些markdown的基本用法，包括排版，链接，图片和代码块
+
+> 建议使用现代文本编辑器编写markdown，如 __code__， 会支持代码高亮以及能够提供即时预览
 
 ## 标题
   * `#`号代表了标题h1，如`# title1`为一级标题
@@ -18,6 +20,8 @@ categories: markdown
   * `\` 是切换到另一行
 
 ## 强调
+  >在使用下面的强调的字符，需要和之前的文本空格\
+  > 不同的编辑器对此的要求可能不一样，但空格总是没错的
   * `*` 或者 `_` 包围使其 *倾斜*
   * `**` 或者 `__`包围使其 **加粗**
   * 单独使用`*` 和 `_` 需要加\作为转义字符，如`\*`
@@ -67,15 +71,14 @@ Four steps to better sleep:
 
         [百度](baidu.com)
 
-  * 经常用到的链接 [百度][1] and [baidu][1]\
-
-[1]:baidu.com
-
-        [百度][1] [baidu][1]
-        ...
-        ...
-        可以统一放置文档末尾
-        [1]:baidu.com
+  * 经常用到的链接 [百度][1] and [baidu][1]
+    ```
+    [百度][1] [baidu][1]
+    ...
+    ...
+    可以统一放置文档末尾
+    [1]:baidu.com
+    ```
 
 ## 图片
   * 通过url使用图片
@@ -89,4 +92,7 @@ Four steps to better sleep:
 
         ![][1]
         [1]: http://commonmark.org/help/images/favicon.png
+
+
+[1]:baidu.com
 
