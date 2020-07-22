@@ -34,30 +34,40 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted
 采用清华开源镜像站的docker-ce[镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 
 >如果你过去安装过 docker，先删掉:
+
 ```
 sudo apt-get remove docker docker-engine docker.io
 ```
+
 >首先安装依赖:
+
 ```
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
+
 >信任 Docker 的 GPG 公钥:
+
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
+
 >对于 amd64 架构的计算机，添加软件仓库:
+
 ```
 sudo add-apt-repository \
    "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 ```
+
 >如果你是树莓派或其它ARM架构计算机，请运行:
+
 ```
 echo "deb [arch=armhf] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubuntu \
      $(lsb_release -cs) stable" | \
     sudo tee /etc/apt/sources.list.d/docker.list
 ```
+
 >最后安装
 
 ```
