@@ -23,7 +23,7 @@ twitter_username: deanph233
 github_username:  cleverpuppy
 
 # Build settings
-markdown: kramdown
+markdown: CommonMark
 theme: minima
 plugins:
   - jekyll-feed
