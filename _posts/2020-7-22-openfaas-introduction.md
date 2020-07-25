@@ -17,41 +17,41 @@ categories: markdown
 
 1. 安装`faas-cli`
 
-```
-# MacOS and Linux users
+    ```
+    # MacOS and Linux users
 
-# If you run the script as a normal non-root user then the script
-# will download the faas-cli binary to the current folder
-$ curl -sL https://cli.openfaas.com | sudo sh
+    # If you run the script as a normal non-root user then the script
+    # will download the faas-cli binary to the current folder
+    $ curl -sL https://cli.openfaas.com | sudo sh
 
-# Windows users with (Git Bash)
-$ curl -sL https://cli.openfaas.com | sh
-```
+    # Windows users with (Git Bash)
+    $ curl -sL https://cli.openfaas.com | sh
+    ```
 
 2. 安装arkade
 
-```
-# For MacOS / Linux:
-curl -SLsf https://dl.get-arkade.dev/ | sudo sh
-```
+    ```
+    # For MacOS / Linux:
+    curl -SLsf https://dl.get-arkade.dev/ | sudo sh
+    ```
 
 3. 安装OpenFaaS
 
-```
-# 单机安装
-arkade install openfaas
+    ```
+    # 单机安装
+    arkade install openfaas
 
-#集群安装
-arkade install openfaas --load-balancer
-```
+    #集群安装
+    arkade install openfaas --load-balancer
+    ```
 
-在安装结束后,可以看到openfaas的 URL 和 密码, 之后就可以通过网页端来操作.
+    在安装结束后,可以看到openfaas的 URL 和 密码, 之后就可以通过网页端来操作.
 
-之后如果需要查看安装信息,可以通过`arkade info`命令获得.
+    之后如果需要查看安装信息,可以通过`arkade info`命令获得.
 
-```
-arkade info openfaas
-```
+    ```
+    arkade info openfaas
+    ```
 
 ## 原理
 
@@ -70,24 +70,24 @@ arkade info openfaas
 #### of-watchdog云行模式
 
 1. HTTP 模式
-
-先启动进程,然后等待HTTP 请求
+   
+   先启动进程,然后等待HTTP 请求
 
 2. 序列化模式
 
-HTTP请求-> 序列化-> fork
+   HTTP请求-> 序列化-> fork
 
 3. 流模式
 
-HTTP请求-> fork -> 流
+   HTTP请求-> fork -> 流
 
 4. Afterburn
 
-request死了后,容器就死了
+   request死了后,容器就死了
 
 5. 静态(文件)模式
-   
-开启一个静态文件服务器.
+      
+   开启一个静态文件服务器
 
 ### alpine linux
 

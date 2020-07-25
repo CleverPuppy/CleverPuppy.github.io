@@ -29,35 +29,35 @@ categories: markdown
 
 2. 在本机登录aliyun registry
 
-```
-# 自行修改以下变量
+    ```
+    # 自行修改以下变量
 
-docker login --username=$USERNAME $REGISTRY_URL
-```
+    docker login --username=$USERNAME $REGISTRY_URL
+    ```
 
-如果需要使用私人仓库镜像，则需要进行步骤3和步骤4.
+    如果需要使用私人仓库镜像，则需要进行步骤3和步骤4.
 
 3. 在openfaas-fn域中配置K8S secrete.
 
-```
-# 自行修改变量
+    ```
+    # 自行修改变量
 
-kubectl create secrete docker-registry $SECRETE_NAME \
-    --docker-server=$REGISTRY_URL
-    --docker-username=$USERNAME
-    --docker-password=$PASSWORD
-    --namespace openfaas-fn
-```
+    kubectl create secrete docker-registry $SECRETE_NAME \
+        --docker-server=$REGISTRY_URL
+        --docker-username=$USERNAME
+        --docker-password=$PASSWORD
+        --namespace openfaas-fn
+    ```
 
 4. 将secrete添加到openfaas-fn域的default service account 中
 
-```
-kubectl edit serviceaccount default -n openfaas-fn
+    ```
+    kubectl edit serviceaccount default -n openfaas-fn
 
-# 然后在文件中添加，自行修改变量：
-imagePullSecrets:
-- name: $SECRETE_NAME
-```
+    # 然后在文件中添加，自行修改变量：
+    imagePullSecrets:
+    - name: $SECRETE_NAME
+    ```
 
 ## 创建一个function
 
