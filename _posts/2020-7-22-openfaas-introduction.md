@@ -67,7 +67,7 @@ categories: markdown
 
 ![watchdog原理](https://camo.githubusercontent.com/61c169ab5cd01346bc3dc7a11edc1d218f0be3b4/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4447536344626c554941416f34482d2e6a70673a6c61726765)
 
-#### of-watchdog云行模式
+#### of-watchdog运行模式
 
 1. HTTP 模式
    
