@@ -74,6 +74,16 @@ echo "deb [arch=armhf] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce
 ```
+### 添加当前用户到Docker组
+
+此举相当于给当前用户root权限！之后使用docker不需要sudo
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+# 之后重新登陆
+```
+
 
 ### docker国内镜像加速
 > [中科大Docker Hub 镜像缓存](https://mirrors.ustc.edu.cn/help/dockerhub.html)
@@ -130,16 +140,11 @@ sudo systemctl restart docker
    缺省会安装Docker驱动的minikube
 
    ```
-   minikube start --image-mirror-country cn --repository-mirror=https://docker.mirrors.ustc.edu.cn/
+   minikube start --image-mirror-country cn --registry-mirror=https://docker.mirrors.ustc.edu.cn
+
    ```
 
 4. 打开k8s控制台
    ```
    minikube dashboard
    ```
-
-
-
-
-
-
