@@ -2,7 +2,7 @@
 layout: post
 title:  "Dockerfile 简单入门"
 date:   2020-7-30
-categories: markdown
+categories: docker
 ---
 
 # Dockerfile 简单入门

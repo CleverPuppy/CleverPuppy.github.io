@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenFaaS Function构建"
 date:   2020-7-24
-categories: markdown
+categories: openfaas k8s
 ---
 
 本文全部采用faas-cli对openfaas进行操作，

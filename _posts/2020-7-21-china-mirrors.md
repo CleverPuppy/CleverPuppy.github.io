@@ -2,7 +2,7 @@
 layout: post
 title:  "K8S环境搭建-国内镜像指南"
 date:   2020-7-21
-categories: markdown
+categories: k8s
 ---
 
 # K8S环境搭建-国内镜像指南

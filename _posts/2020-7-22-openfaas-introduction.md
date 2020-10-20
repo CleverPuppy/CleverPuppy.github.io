@@ -2,7 +2,7 @@
 layout: post
 title:  "OpenFaaS Introduction"
 date:   2020-7-22
-categories: markdown
+categories: openfaas k8s
 ---
 
 # OpenFaaS Introduction

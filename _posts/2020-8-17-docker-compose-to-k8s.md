@@ -2,7 +2,7 @@
 layout: post
 title:  "从docker-compose到k8s"
 date:   2020-8-17
-categories: markdown
+categories: docker k8s
 ---
 
 ## docker-compose

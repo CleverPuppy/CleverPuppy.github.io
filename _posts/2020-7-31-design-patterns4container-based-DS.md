@@ -2,7 +2,7 @@
 layout: post
 title:  "Design patterns for container-based distributed systems阅读笔记"
 date:   2020-7-31
-categories: markdown
+categories: k8s
 ---
 
 ## 分布式系统设计模式
